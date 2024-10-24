@@ -13,8 +13,10 @@ export default function Welcome(){
             <Text style={styles.heading}>
                 Welcome
             </Text>
-            <CustomNavButton title={'SIGN IN'} path={'Onboarding'}/>
-            <CustomNavButton title={'SIGN UP'} />
+            <View style={{position: 'absolute', bottom: 90, }}>
+                <CustomNavButton title={'SIGN IN'} path={'SignIn'}/>
+                <CustomNavButton title={'SIGN UP'} path={'SignUp'}/>
+            </View>
         </View>
     );
 }
@@ -30,6 +32,8 @@ const styles = StyleSheet.create({
     heading: {
         fontSize: FontSize.Large,
         fontWeight: FontWeight.Bold,
-        color: Colors.BackgroundColor
+        color: Colors.BackgroundColor,
+        marginTop: -90,
+        
     }
 });

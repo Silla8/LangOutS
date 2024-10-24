@@ -4,23 +4,29 @@ import { FontSize } from "../constants/FontSize";
 import { FontWeight } from "../constants/FontWeight";
 import { useRouter } from "expo-router";
 import CustomNavButton from "../components/CustomNavButton";
+import { useSession } from "../context/SessionContext";
 
 
 
 export default function Onboarding(){
 
-    const router = useRouter();
+    
+   
     return (
         <View style={styles.container}>
-            <Image source={require('../assets/onImage.png')} style={{width: 200, height: 200, borderRadius: 200}}/>
-            <Text style={styles.heading}>
-                Find Your Community!
-            </Text>
-            <Text style={styles.text}>
-                Solutions for passionate people
-                to find friends with same passion  
-            </Text>
-            <CustomNavButton title={'GET STARTED'} path={'Welcome'}/> 
+            <Image source={require('../assets/onImage.png')} style={styles.image}/>
+            <View style={styles.comment}>   
+                <Text style={styles.heading}>
+                    Find Your Community!
+                </Text>
+                <Text style={styles.text}>
+                    Solutions for passionate people
+                    to find friends with same passion  
+                </Text>
+            </View>
+            <View style={{position: 'absolute', bottom: 90, }}>
+                <CustomNavButton title={'GET STARTED'} path={'Welcome'}/> 
+            </View>
         </View>
     );
 }
@@ -44,9 +50,25 @@ const styles = StyleSheet.create({
     text: {
         color: Colors.BackgroundColor,
         fontSize: FontSize.Small,
-        width: '60%', 
+        width: '75%', 
         textAlign: 'center',
         
+        
 
-    }
+    },
+    image: {
+        width: 200, 
+        height: 200, 
+        borderRadius: 200, 
+        marginTop: -250
+    },
+
+    comment: {
+    position: 'absolute', 
+    width: '80%', 
+    bottom: 190,
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center',  
+},
 });
