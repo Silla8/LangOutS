@@ -10,13 +10,7 @@ import { Platform } from "react-native";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAd6w84IoMmCeAZRAaQCC-WJ44uttu8GlY",
-  authDomain: "langouts-54a2b.firebaseapp.com",
-  projectId: "langouts-54a2b",
-  storageBucket: "langouts-54a2b.appspot.com",
-  messagingSenderId: "51919990427",
-  appId: "1:51919990427:web:0e8b07089e3f4bf767603e",
-  measurementId: "G-84QR919GFQ"
+  
 };
 
 let persistence;
